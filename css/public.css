@@ -1,0 +1,407 @@
+/*baseCss  start*/
+*{font-family:"Microsoft Yahei"; font-size:16px; margin:0 auto; padding:0; list-style:none; text-decoration:none;}
+
+img{border:none; vertical-align: top;}
+
+ul,ul li,dl,dl dt,dl dd{display:block; margin:0; padding:0;}
+
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+
+a{color:#666; cursor:pointer;}
+
+a:hover{ text-decoration:none;}
+
+input,button {outline: none;}textarea {outline: none;}
+
+.fl{ float:left;}
+
+.fr{ float:right;}
+
+.layout{ width:960px;}
+
+/*i,em{ font-style:normal;}*/
+.clearfix:before,.clearfix:after{content:'';display: table;}
+.clearfix:after {clear:both;}
+.clearfix{zoom:1;}/*IE/7/6*/
+
+.w {width:1200px;margin: 0 auto;}
+
+/*header*/
+.zgHead {
+	width: 100%;
+	min-width:1200px;
+	height: 50px;
+	background: #fff;
+}
+.zgHead.fixed {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	transition: 0.3s
+}
+.zghl {
+	float: left;
+	width: 70%;
+	height: 50px;
+}
+.zghl img {
+    /*width: 95%;*/
+    width: 160px;
+}
+.zghl .im1 {
+	float: left;
+	margin-top: 2px;
+	margin-right: 20px;
+}
+.zghl .im2 {
+	float: left;
+	margin-top: 14px;
+	margin-right: 10px;
+}
+.zghl dl {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	height: 50px;
+	width: 60%;
+}
+.zghl dl a {
+	display: block;
+	flex: 1;
+	font-size: 15px;
+	font-weight: bold;
+	color:#4c4c4c;
+	text-align: center;
+	line-height: 50px;
+	transition: 0.3s
+}
+.zghl dl a:hover {
+	color:#fff;
+	background: #e60012;
+}
+.zghr {
+	float: right;
+	width: 30%;
+	height: 50px;
+}
+.zghr a {
+	float: right;
+	display: block;
+	font-size: 15px;
+	font-weight: bold;
+	color:#4c4c4c;
+	text-align: center;
+	line-height: 50px;
+}
+.zghr a img {
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-top: -3px;
+}
+/*footer*/
+.copyright {background: #f3f3f3;width:100%;min-width:1200px;}
+.copyrightc {color: rgb(102, 102, 102);text-align: center;font: 14px/24px "microsoft yahei";padding: 30px 0px 25px;}
+.copyrightc a {color: rgb(102, 102, 102);text-align: center;font: 14px/24px "microsoft yahei";}
+.copyrightc span{color: rgb(102, 102, 102);text-align: center;font: 14px/24px "microsoft yahei";}
+/*baseCss  end*/
+
+
+/*自定义按钮样式start*/
+a.animBtn:link, a.animBtn:visited {
+  position: relative;
+  display: inline-block;
+  margin: 18px auto 0;
+  padding: 14px 25px;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: .08em;
+  border-radius:27px;
+  margin-right: 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+a.animBtn:link:after, a.animBtn:visited:after {
+  content: "";
+  position: absolute;
+  background: none repeat scroll 0 0 #fff;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  z-index: -1;
+  -webkit-transition: all .3s ease 0s;
+  -moz-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+}
+/*修改hover*/
+a.animBtn:link:hover, a.animBtn:visited:hover {
+  color: #fc417b;
+  font-weight: bold;
+  text-shadow: none;
+}
+a.animBtn:link:hover:after, a.animBtn:visited:hover:after {
+  height: 420%;
+}
+
+a.animBtn.themeA:after {
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+a.animBtn.themeB:after {
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+a.animBtn.themeC:after {
+  opacity: .5;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+a.animBtn.themeC:hover:after {
+  height: 140%;
+  opacity: 1;
+}
+a.animBtn.themeD:after {
+  width: 0%;
+  border-radius: 50%;
+  opacity: .5;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+a.animBtn.themeD:hover:after {
+  height: 450%;
+  width: 110%;
+  opacity: 1;
+}
+/*自定义按钮样式end*/
+
+/*fixed_r*/
+
+.fixed_r {
+
+  position: fixed;
+
+  width: 151px;
+
+  height: 588px;
+
+  background: url(../images/fixed_r.png) no-repeat;
+
+  right: 0px;
+
+  top: 20%;
+
+  z-index: 9997;
+
+  text-align: center;
+  display: none;
+
+}
+
+.toplink {
+
+  height: 16px;
+
+  display: -webkit-flex;
+
+  display: -moz-flex;
+
+  display: -ms-flex;
+
+  display: -o-flex;
+
+  display: flex;
+
+  margin-top: 72px;
+
+  margin-bottom: 17px;
+
+}
+
+.toplink a {
+
+  flex: 1;
+
+  font:400 14px/16px "microsoft yahei";
+
+  color:#323232;
+
+  text-align: center;
+
+  transition: 0.3s
+
+}
+
+.toplink a:hover {
+
+  color:#e91f1f;
+
+  font-weight: bold;
+
+}
+
+.fixrul {
+
+  margin-left: 2px;
+
+  margin-right: 2px;
+
+}
+
+.fixrul a{
+
+  display: block;
+
+  height: 27px;
+
+  cursor: pointer;
+
+  transition: 0.3s
+
+}
+
+.fixrul a:hover {
+
+  background: #ffed14;
+
+}
+
+.fixrul a:hover span {
+
+  color:#e91f1f;
+
+}
+
+.fixrul a:hover p {
+
+  color:#e91f1f;
+
+}
+
+.fixrul a span{
+
+  display: block;
+
+  float: left;
+
+  width: 58px;
+
+  height: 100%;
+
+  font:700 12px/27px "microsoft yahei";
+
+  color:#333;
+
+  text-align: center;
+
+  /*margin-left: 4px;*/
+
+  margin-right: 2px;
+
+  transition: 0.3s
+
+}
+
+.fixrul a p{
+
+  display: block;
+
+  float: left;
+
+  height: 100%;
+
+  font:400 12px/27px "microsoft yahei";
+
+  color:#333;
+
+  text-align: center;
+
+  transition: 0.3s
+
+}
+
+
+
+.fixed_r .close {
+
+  position: absolute;
+
+  width: 30px;
+
+  height: 30px;
+
+  top: 0;
+
+  right: 0;
+
+  cursor: pointer;
+
+}
+
+.fixedtop {
+
+    position: absolute;
+
+    width: 40px;
+
+    height: 26px;
+
+    bottom: 19px;
+
+    left: 50%;
+
+    margin-left: -20px;
+
+    cursor: pointer;
+
+}
+
+.online {
+
+  position: fixed;
+
+  width: 48px;
+
+  height: 206px;
+
+  right: 0px;
+
+  /*right: 0px;*/
+
+  top: 30%;
+
+  background: url(../images/online.png) no-repeat;
+
+  z-index: 99;
+
+  cursor: pointer;
+
+  /*display: none;*/
+
+}
+
+
+.beat-char {
+  position: relative;
+}
+h2.tt .beat-char{
+  font-size: 36px;
+}
